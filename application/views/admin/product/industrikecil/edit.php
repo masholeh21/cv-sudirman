@@ -100,7 +100,7 @@ echo validation_errors('<div class="alert alert-success">','</div>');
 <div class="form-group">
 	<input type="submit" name="submit" value="Update" class="btn btn-primary">
     <input type="reset" name="reset" value="Reset" class="btn btn-default">
-    <a href="<?php echo base_url('admin/produk/industri_kecil/') ?>" class="btn btn-primary">Cancel</a>
+    <a href="<?php echo base_url('admin/product/industri_kecil/') ?>" class="btn btn-primary">Cancel</a>
     </div>
 </div>
 

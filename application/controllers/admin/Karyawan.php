@@ -20,7 +20,7 @@
 		$site = $this->mConfig->list_config();
 
 		$v = $this->form_validation;
-		$v->set_rules('nama','Karyawan Name','required');
+		$v->set_rules('nama','jabatan','required');
 
 		if($v->run()) {
 
@@ -55,7 +55,7 @@
 								'jabatan' 		=> $i->post('jabatan'),
 								'image'			=> $upload_data['uploads']['file_name']
 				 			 );
-				$this->mKaryawan->createGaleriFoto($data);
+				$this->mKaryawan->createkaryawan($data);
 				$this->session->set_flashdata('sukses','Success');
 				redirect(base_url('admin/Karyawan'));
 		}}
@@ -70,11 +70,11 @@
 	public function edit($id_karyawan) {
 
 		$Karyawan		= $this->mKaryawan->detailKaryawan($id_karyawan);
-		$endGaleriFoto	= $this->mKaryawan->endKaryawan();
+		$endKaryawan	= $this->mKaryawan->endKaryawan();
 
 		// Validation
 		$v = $this->form_validation;
-		$v->set_rules('nama','karyawan Name','required');
+		$v->set_rules('nama','jabatan','required');
 
 		if($v->run()) {
 			if(!empty($_FILES['image']['name'])) {
@@ -107,11 +107,10 @@
 
 			$i = $this->input;
 
-			unlink('./assets/upload/image/'.$gallery['image']);
-			unlink('./assets/upload/image/thumbs/'.$gallery['image']);
+			unlink('./assets/upload/image/'.$Karyawan['image']);
 
 			$slugKaryawan = $endKaryawan['id_Karyawan'].'-'.url_title($i->post('nama'),'dash', TRUE);
-			$data = array(	'id_Karyawan'		=> $karyawan['id_Karyawan'],
+			$data = array(	'id_Karyawan'		=> $Karyawan['id_Karyawan'],
 							'slug_Karyawan'		=> $slugKaryawan,
 							'nama'				=> $i->post('nama'),
 							'jabatan'			=> $i->post('jabatan'),
