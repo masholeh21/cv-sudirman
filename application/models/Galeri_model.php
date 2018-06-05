@@ -1,0 +1,120 @@
+<?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+
+    class Galeri_model extends CI_Model {
+
+        public function __construct() {
+            $this->load->database();
+        }
+
+        // Listing GaleriFoto
+        public function listGaleriFoto() {
+            $this->db->select('*');
+            $this->db->from('galeri_foto');
+            $this->db->order_by('id_galeri_foto','ASC');
+            $query = $this->db->get();
+            return $query->result_array();
+        }
+
+        // Create GaleriFoto
+        public function createGaleriFoto($data) {
+            $this->db->insert('galeri_foto',$data);
+        }
+
+        // Detail GaleriFoto
+        public function detailGaleriFoto($id_galeri_foto) {
+            $this->db->select('*');
+            $this->db->from('galeri_foto');
+            $this->db->where('id_galeri_foto',$id_galeri_foto);
+            $this->db->order_by('id_galeri_foto','DESC');
+            $query = $this->db->get();
+            return $query->row_array();
+        }
+
+        // Read GaleriFoto
+        public function readGaleriFoto($slugGaleriFoto) {
+            $this->db->select('*');
+            $this->db->from('galeri_foto');
+            $this->db->where('slug_galeri_foto',$slugGaleriFoto);
+            $query = $this->db->get();
+            return $query->row_array();
+        }
+
+        // Edit GaleriFoto
+        public function editGaleriFoto($data) {
+            $this->db->where('id_galeri_foto',$data['id_galeri_foto']);
+            $this->db->update('galeri_foto',$data);
+        }
+
+        // Delete GaleriFoto
+        public function deleteGaleriFoto($data) {
+            $this->db->where('id_galeri_foto',$data['id_galeri_foto']);
+            $this->db->delete('galeri_foto',$data);
+        }
+
+        // End GaleriFoto
+        public function endGaleriFoto() {
+            $this->db->select('*');
+            $this->db->from('galeri_foto');
+            $this->db->order_by('id_galeri_foto','DESC');
+            $query = $this->db->get();
+            return $query->row_array();
+        }
+
+        ///////////////////////////////////////////////
+
+        // Listing GaleriVideo
+        public function listGaleriVideo() {
+            $this->db->select('*');
+            $this->db->from('galeri_video');
+            $this->db->order_by('id_galeri_video','ASC');
+            $query = $this->db->get();
+            return $query->result_array();
+        }
+
+        // Create GaleriVideo
+        public function createGaleriVideo($data) {
+            $this->db->insert('galeri_video',$data);
+        }
+
+        // Detail GaleriVideo
+        public function detailGaleriVideo($id_galeri_video) {
+            $this->db->select('*');
+            $this->db->from('galeri_video');
+            $this->db->where('id_galeri_video',$id_galeri_video);
+            $this->db->order_by('id_galeri_video','DESC');
+            $query = $this->db->get();
+            return $query->row_array();
+        }
+
+        // Read GaleriVideo
+        public function readGaleriVideo($slugGaleriVideo) {
+            $this->db->select('*');
+            $this->db->from('galeri_video');
+            $this->db->where('slug_galeri_video',$slugGaleriVideo);
+            $query = $this->db->get();
+            return $query->row_array();
+        }
+
+        // Edit GaleriVideo
+        public function editGaleriVideo($data) {
+            $this->db->where('id_galeri_video',$data['id_galeri_video']);
+            $this->db->update('galeri_video',$data);
+        }
+
+        // Delete GaleriVideo
+        public function deleteGaleriVideo($data) {
+            $this->db->where('id_galeri_video',$data['id_galeri_video']);
+            $this->db->delete('galeri_video',$data);
+        }
+
+        // End GaleriVideo
+        public function endGaleriVideo() {
+            $this->db->select('*');
+            $this->db->from('galeri_video');
+            $this->db->order_by('id_galeri_video','DESC');
+            $query = $this->db->get();
+            return $query->row_array();
+        }
+    }
+?>
