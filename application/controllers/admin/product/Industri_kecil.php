@@ -7,7 +7,7 @@
 		$site      = $this->mConfig->list_config();
 		$IndustriKecil = $this->mProduk->listIndustriKecil();
 
-		$data = array(	'title'			=> 'Management Product - '.$site['namaweb'],
+		$data = array(	'title'			=> 'Produk - Industri Kecil - '.$site['namaweb'],
 						'idustri_kecil'	=> $IndustriKecil,
 						'site'			=> $site,
 						'isi'			=> 'admin/product/industrikecil/list');
@@ -20,7 +20,7 @@
 		$site = $this->mConfig->list_config();
 
 		$v = $this->form_validation;
-		$v->set_rules('judul','Product Name','required');
+		$v->set_rules('judul','deskripsi','required');
 
 		if($v->run()) {
 
@@ -50,7 +50,7 @@
 
 				$i = $this->input;
 				$slugIndustriKecil = url_title($this->input->post('judul'), 'dash', TRUE);
-				$data = array(	'slug_gallery'	=> $slugIndustriKecil,
+				$data = array(	'slug_industri_kecil'	=> $slugIndustriKecil,
 								'judul'			=> $i->post('judul'),
 								'deskripsi' 	=> $i->post('deskripsi'),
 								'image'			=> $upload_data['uploads']['file_name']
@@ -60,7 +60,7 @@
 				redirect(base_url('admin/product/industri_kecil'));
 		}}
 		// Default page
-		$data = array(	'title'		=> 'Create Gallery - '.$site['nameweb'],
+		$data = array(	'title'		=> 'Create Gallery - '.$site['namaweb'],
 						'site'		=> $site,
 						'isi'		=> 'admin/product/industrikecil/create');
 		$this->load->view('admin/layout/wrapper',$data);
@@ -117,7 +117,7 @@
 							'deskripsi' 			=> $i->post('deskripsi'),
 							'image'					=> $upload_data['uploads']['file_name']
 							);
-			$this->IndustriKecil->editIndustriKecil($data);
+			$this->mProduk->editIndustriKecil($data);
 			$this->session->set_flashdata('sukses','Success');
 			redirect(base_url('admin/product/industri_kecil'));
 		}}else{
@@ -128,7 +128,7 @@
 							'judul'					=> $i->post('judul'),
 							'deskripsi' 			=> $i->post('deskripsi'),
 							);
-			$this->IndustriKecil->editIndustriKecil($data);
+			$this->mProduk->editIndustriKecil($data);
 			$this->session->set_flashdata('sukses','Success');
 			redirect(base_url('admin/product/industri_kecil'));
 		}}
