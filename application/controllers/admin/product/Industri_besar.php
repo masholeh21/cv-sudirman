@@ -7,7 +7,7 @@
 		$site      = $this->mConfig->list_config();
 		$IndustriBesar = $this->mProduk->listIndustriBesar();
 
-		$data = array(	'title'			=> 'Management Product - '.$site['namaweb'],
+		$data = array(	'title'			=> 'Produk - Industri Besar - '.$site['namaweb'],
 						'idustri_besar'	=> $IndustriBesar,
 						'site'			=> $site,
 						'isi'			=> 'admin/product/industribesar/list');
@@ -20,7 +20,7 @@
 		$site = $this->mConfig->list_config();
 
 		$v = $this->form_validation;
-		$v->set_rules('judul','Product Name','required');
+		$v->set_rules('judul','deskripsi','required');
 
 		if($v->run()) {
 
@@ -50,7 +50,7 @@
 
 				$i = $this->input;
 				$slugIndustriBesar = url_title($this->input->post('judul'), 'dash', TRUE);
-				$data = array(	'slug_gallery'	=> $slugIndustriBesar,
+				$data = array(	'slug_industri_besar'	=> $slugIndustriBesar,
 								'judul'			=> $i->post('judul'),
 								'deskripsi' 	=> $i->post('deskripsi'),
 								'image'			=> $upload_data['uploads']['file_name']
@@ -60,7 +60,7 @@
 				redirect(base_url('admin/product/industri_besar'));
 		}}
 		// Default page
-		$data = array(	'title'		=> 'Create Gallery - '.$site['nameweb'],
+		$data = array(	'title'		=> 'Create Gallery - '.$site['namaweb'],
 						'site'		=> $site,
 						'isi'		=> 'admin/product/industribesar/create');
 		$this->load->view('admin/layout/wrapper',$data);
@@ -74,7 +74,7 @@
 
 		// Validation
 		$v = $this->form_validation;
-		$v->set_rules('judul','Product Name','required');
+		$v->set_rules('judul','deskripsi','required');
 
 		if($v->run()) {
 			if(!empty($_FILES['image']['name'])) {
@@ -117,7 +117,7 @@
 							'deskripsi' 			=> $i->post('deskripsi'),
 							'image'					=> $upload_data['uploads']['file_name']
 							);
-			$this->IndustriBesar->editIndustriBesar($data);
+			$this->mProduk->editIndustriBesar($data);
 			$this->session->set_flashdata('sukses','Success');
 			redirect(base_url('admin/product/industri_besar'));
 		}}else{
@@ -128,7 +128,7 @@
 							'judul'					=> $i->post('judul'),
 							'deskripsi' 			=> $i->post('deskripsi'),
 							);
-			$this->IndustriBesar->editIndustriBesar($data);
+			$this->mProduk->editIndustriBesar($data);
 			$this->session->set_flashdata('sukses','Success');
 			redirect(base_url('admin/product/industri_besar'));
 		}}
