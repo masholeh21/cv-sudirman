@@ -12,47 +12,43 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
 
+                  <?php
+                    $i=2;
+                    foreach ($sliders as $slider){
+                    if ($i % 2 == 0){
+                  ?>
                   <!-- First slide -->
-                  <div class="item active slide-1 text-left">
+                  <div class="item active slide-<?php echo $i ?> text-left">
+                      <img src="<?php echo base_url('assets/upload/image/'.$slider['image']);?>" alt="Image slide 3"/>
                       <div class="carousel-caption">
                           <p data-animation="animated fadeInUp">
-                             Induction Furnance System
+                             <?php echo $slider['judul'];?>
                           </p>
                           <h3 data-animation="animated fadeInUp">
-                              Selamat Datang di <span>CV-SUDIRMAN</span>
+                              <?php echo $slider['sub_judul'];?>
                           </h3>
                           <a href="contact.html" class="btn btn-primary btn-lg" data-animation="animated zoomIn">Contact Us</a>
                       </div>
                   </div>
-                  <!-- /.item -->
 
-                  <!-- Second slide -->
-                  <div class="item slide-2 text-right">
-                      <div class="carousel-caption">
-                          <p data-animation="animated fadeInUp">
-                              CV-SUDIRMAN
-                          </p>
-                          <h3 data-animation="animated fadeInUp">
-                              Anda butuh jasa <span>Pencairan Logam </span> ? Kami Siap Membantu
-                          </h3>
-                          <a href="contact.html" class="btn btn-primary btn-lg" data-animation="animated zoomIn">Contact Us</a>
-                      </div>
-                  </div>
-                  <!-- /.item -->
+                  <?php }else{ ?>
 
-                  <!-- Third slide -->
-                  <div class="item slide-3 text-left">
+                  <div class="item slide-<?php echo $i ?> text-right">
+                      <img src="<?php echo base_url('assets/upload/image/'.$slider['image']);?>" alt="Image slide 3"/>
                       <div class="carousel-caption">
                           <p data-animation="animated fadeInUp">
-                             CV-SUDIRMAN
+                             <?php echo $slider['judul'];?>
                           </p>
                           <h3 data-animation="animated fadeInUp">
-                              Hubungi kami <span>segera</span>
+                              <?php echo $slider['sub_judul'];?>
                           </h3>
                           <a href="contact.html" class="btn btn-primary btn-lg" data-animation="animated zoomIn">Contact Us</a>
                       </div>
                   </div>
-                  <!-- /.item -->
+
+                  <?php
+                    } $i++; }
+                  ?>
 
               </div>
               <!-- /.carousel-inner -->
@@ -148,72 +144,7 @@
                               </p>
                           </div>
                       </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6 fw600">
-                          <div class="serviceBox wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                              <div class="service-icon">
-                                  <i class="flaticon-ruler-and-pencil-1"></i>
-                              </div>
-                              <h3 class="title">Design Build</h3>
-                              <p class="description">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6 fw600">
-                          <div class="serviceBox wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                              <div class="service-icon">
-                                  <i class="flaticon-wrench"></i>
-                              </div>
-                              <h3 class="title">Construction Services</h3>
-                              <p class="description">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6 fw600">
-                          <div class="serviceBox wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                              <div class="service-icon">
-                                  <i class="flaticon-home-1"></i>
-                              </div>
-                              <h3 class="title">Best planning</h3>
-                              <p class="description">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6 fw600">
-                          <div class="serviceBox wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                              <div class="service-icon">
-                                  <i class="flaticon-worker-1"></i>
-                              </div>
-                              <h3 class="title">Hard work</h3>
-                              <p class="description">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6 fw600">
-                          <div class="serviceBox wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                              <div class="service-icon">
-                                  <i class="flaticon-buildings"></i>
-                              </div>
-                              <h3 class="title">Strong building</h3>
-                              <p class="description">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6 fw600">
-                          <div class="serviceBox wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                              <div class="service-icon">
-                                  <i class="flaticon-home"></i>
-                              </div>
-                              <h3 class="title">Home structure</h3>
-                              <p class="description">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-                              </p>
-                          </div>
-                      </div>
+
                   </div>
               </div>
               <div class="col-md-4 col-sm-12">
@@ -284,110 +215,32 @@
           <div class="row">
               <div class="col-md-12">
                   <div class="defult-title text-center">
-                      <h1>Our recent <span>projects</span></h1>
-                      <h5>consectetur adipisicing elit alias</h5>
+                      <h1><span>product</span></h1>
+                      <h5>Product CV. Sudirman</h5>
                   </div>
               </div>
           </div>
           <div class="row">
-              <div class="col-md-8 col-sm-8">
-                  <div class="project-col">
-                      <div class="hover-box">
-                          <img class="fixed-hight280 fixed-hight210" src="<?php echo base_url(); ?>assets/images/project/1.jpg" alt="">
-                          <div class="hover-box-content">
-                              <h3>Project title</h3>
-                              <ul class="icon">
-                                  <li><a class="gallery" href="images/project/1.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                  <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+
+              <?php foreach ($produks as $produk){ ?>
+
               <div class="col-md-4 col-sm-4">
                   <div class="project-col">
                       <div class="hover-box">
-                          <img src="<?php echo base_url(); ?>assets/images/project/2.jpg" alt="">
+                          <img src="<?php echo base_url('assets/upload/image/'.$produk['image']);?>" alt="">
                           <div class="hover-box-content">
-                              <h3>Project title</h3>
+                              <h3><?php echo produk['judul'];?></h3>
                               <ul class="icon">
-                                  <li><a class="gallery" href="images/project/2.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
+                                  <li><a class="gallery" href="<?php echo base_url('assets/upload/image/'.$produk['image']);?>" data-lightbox="lightbox" data-title="<?php echo produk['judul'];?>"><i class="fa fa-search"></i></a></li>
                                   <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
                               </ul>
                           </div>
                       </div>
                   </div>
               </div>
-              <div class="col-md-4 col-sm-4">
-                  <div class="project-col">
-                      <div class="hover-box">
-                          <img src="<?php echo base_url(); ?>assets/images/project/3.jpg" alt="">
-                          <div class="hover-box-content">
-                              <h3>Project title</h3>
-                              <ul class="icon">
-                                  <li><a class="gallery" href="images/project/3.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                  <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                  <div class="project-col">
-                      <div class="hover-box">
-                          <img src="<?php echo base_url(); ?>assets/images/project/4.jpg" alt="">
-                          <div class="hover-box-content">
-                              <h3>Project title</h3>
-                              <ul class="icon">
-                                  <li><a class="gallery" href="images/project/4.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                  <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                  <div class="project-col">
-                      <div class="hover-box">
-                          <img src="<?php echo base_url(); ?>assets/images/project/5.jpg" alt="">
-                          <div class="hover-box-content">
-                              <h3>Project title</h3>
-                              <ul class="icon">
-                                  <li><a class="gallery" href="images/project/5.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                  <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-4 col-sm-4">
-                  <div class="project-col">
-                      <div class="hover-box">
-                          <img src="<?php echo base_url(); ?>assets/images/project/6.jpg" alt="">
-                          <div class="hover-box-content">
-                              <h3>Project title</h3>
-                              <ul class="icon">
-                                  <li><a class="gallery" href="images/project/6.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                  <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-8 col-sm-8">
-                  <div class="project-col">
-                      <div class="hover-box">
-                          <img class="fixed-hight280 fixed-hight210" src="<?php echo base_url(); ?>assets/images/project/7.jpg" alt="">
-                          <div class="hover-box-content">
-                              <h3>Project title</h3>
-                              <ul class="icon">
-                                  <li><a class="gallery" href="images/project/7.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                  <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+
+              <?php } ?>
+
           </div>
       </div>
   </section>

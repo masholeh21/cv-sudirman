@@ -33,7 +33,7 @@
 		$data = array(	'title'			=> 'Create Galeri Foto - '.$site['namaweb'],
 						'site'			=> $site,
 						'error'			=> $this->upload->display_errors(),
-						'isi'			=> 'admin/galley/foto/create');
+						'isi'			=> 'admin/gallery/foto/create');
 		$this->load->view('admin/layout/wrapper',$data);
 		}else{
 				$upload_data				= array('uploads' =>$this->upload->data());
@@ -50,10 +50,9 @@
 
 				$i = $this->input;
 				$slugGaleriFoto = url_title($this->input->post('judul'), 'dash', TRUE);
-				$data = array(	'slug_gallery'	=> $slugGaleriFoto,
-								'judul'			=> $i->post('judul'),
-								'deskripsi' 	=> $i->post('deskripsi'),
-								'image'			=> $upload_data['uploads']['file_name']
+				$data = array(	'slug_galeri_foto'	=> $slugGaleriFoto,
+								'judul'				=> $i->post('judul'),
+								'image'				=> $upload_data['uploads']['file_name']
 				 			 );
 				$this->mGaleri->createGaleriFoto($data);
 				$this->session->set_flashdata('sukses','Success');
@@ -62,14 +61,14 @@
 		// Default page
 		$data = array(	'title'		=> 'Create Gallery - '.$site['namaweb'],
 						'site'		=> $site,
-						'isi'		=> 'admin/galerry/foto/create');
+						'isi'		=> 'admin/gallery/foto/create');
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
 	// Edit Gallery
 	public function edit($id_galeri_foto) {
 
-		$GaleriFoto		= $this->mGaleri->detailGaleriFoto($id_Galeri_foto);
+		$GaleriFoto		= $this->mGaleri->detailGaleriFoto($id_galeri_foto);
 		$endGaleriFoto	= $this->mGaleri->endGaleriFoto();
 
 		// Validation
@@ -116,7 +115,7 @@
 							'judul'					=> $i->post('judul'),
 							'image'					=> $upload_data['uploads']['file_name']
 							);
-			$this->GaleriFoto->editGaleriFoto($data);
+			$this->mGaleri->editGaleriFoto($data);
 			$this->session->set_flashdata('sukses','Success');
 			redirect(base_url('admin/gallery/galeri_foto'));
 		}}else{
@@ -126,19 +125,19 @@
 							'slug_galeri_foto'		=> $slugGaleriFoto,
 							'judul'					=> $i->post('judul'),
 							);
-			$this->GaleriFoto->editGaleriFoto($data);
+			$this->mGaleri->editGaleriFoto($data);
 			$this->session->set_flashdata('sukses','Success');
 			redirect(base_url('admin/gallery/Galeri_foto'));
 		}}
 
 		$data = array(	'title'				=> 'Edit Galeri Foto- '.$GaleriFoto['judul'],
-						'Galeri_foto'		=> $GaleriFoto,
+						'GaleriFoto'		=> $GaleriFoto,
 						'isi'				=> 'admin/gallery/foto/edit');
 		$this->load->view('admin/layout/wrapper', $data);
 	}
 
 	// Delete Gallery
-	public function delete($id_Galeri_foto) {
+	public function delete($id_galeri_foto) {
 		$data = array('id_galeri_foto'	=> $id_galeri_foto);
 		$this->mGaleri->deleteGaleriFoto($data);
 		$this->session->set_flashdata('sukses','Success');

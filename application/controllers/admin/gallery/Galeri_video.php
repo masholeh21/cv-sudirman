@@ -5,10 +5,10 @@
       public function index(){
 
 		$site      = $this->mConfig->list_config();
-		$Galerivideo = $this->mGaleri->listGalerivideo();
+		$GaleriVideo = $this->mGaleri->listGalerivideo();
 
 		$data = array(	'title'			=> 'Management Galeri Video - '.$site['namaweb'],
-						'galeri_video'	=> $Galerivideo,
+						'galerivideo'	=> $GaleriVideo,
 						'site'			=> $site,
 						'isi'			=> 'admin/gallery/video/list');
 		$this->load->view('admin/layout/wrapper',$data);
@@ -26,32 +26,30 @@
 
 		$data = array(	'title'			=> 'Create Galeri Video - '.$site['namaweb'],
 						'site'			=> $site,
-						'error'			=> $this->upload->display_errors(),
 						'isi'			=> 'admin/gallery/video/create');
 		$this->load->view('admin/layout/wrapper',$data);
 
 				$i = $this->input;
 				$slugGalerivideo = url_title($this->input->post('judul'), 'dash', TRUE);
-				$data = array(	'slug_gallery'	=> $slugGalerivideo,
-								'judul'			=> $i->post('judul'),
-								'deskripsi' 	=> $i->post('deskripsi'),
-								'image'			=> $upload_data['uploads']['file_name']
+				$data = array(	'slug_galeri_video'	=> $slugGalerivideo,
+								'judul'				=> $i->post('judul'),
+								'link_video' 		=> $i->post('link_video')
 				 			 );
 				$this->mGaleri->createGalerivideo($data);
 				$this->session->set_flashdata('sukses','Success');
-				redirect(base_url('admin/Gallery/Galeri_video'));
+				redirect(base_url('admin/gallery/Galeri_video'));
 		}
 		// Default page
 		$data = array(	'title'		=> 'Create Gallery - '.$site['namaweb'],
 						'site'		=> $site,
-						'isi'		=> 'admin/Galerry/video/create');
+						'isi'		=> 'admin/gallery/video/create');
 		$this->load->view('admin/layout/wrapper',$data);
 	}
 
 	// Edit Gallery
 	public function edit($id_galeri_video) {
 
-		$Galerivideo		= $this->mGaleri->detailGalerivideo($id_Galeri_video);
+		$Galerivideo		= $this->mGaleri->detailGalerivideo($id_galeri_video);
 		$endGalerivideo	= $this->mGaleri->endGalerivideo();
 
 		// Validation
@@ -60,7 +58,7 @@
 
 		if($v->run()) {
 		$data = array(	'title'				=> 'Edit Galeri - '.$Galerivideo['judul'],
-						'Galeri_video'		=> $Galerivideo,
+						'GaleriVideo'		=> $Galerivideo,
 						'isi'				=> 'admin/gallery/video/edit');
 		$this->load->view('admin/layout/wrapper', $data);
 
@@ -69,14 +67,15 @@
 			$data = array(	'id_galeri_video'		=> $Galerivideo['id_galeri_video'],
 							'slug_galeri_video'		=> $slugGalerivideo,
 							'judul'					=> $i->post('judul'),
+							'link_video'			=> $i->post('link_video')
 							);
 
-			$this->Galerivideo->editGalerivideo($data);
+			$this->mGaleri->editGalerivideo($data);
 			$this->session->set_flashdata('sukses','Success');
 			redirect(base_url('admin/gallery/Galeri_video'));
 		}
 		$data = array(	'title'				=> 'Edit Galeri - '.$Galerivideo['judul'],
-						'Galeri_video'		=> $Galerivideo,
+						'GaleriVideo'		=> $Galerivideo,
 						'isi'				=> 'admin/gallery/video/edit');
 		$this->load->view('admin/layout/wrapper', $data);
 	}
@@ -88,4 +87,4 @@
 		$this->session->set_flashdata('sukses','Success');
 		redirect(base_url('admin/gallery/Galeri_video'));
 	}
-}p
+}
