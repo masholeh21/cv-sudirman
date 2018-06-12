@@ -229,9 +229,9 @@
                       <div class="hover-box">
                           <img src="<?php echo base_url('assets/upload/image/'.$produk['image']);?>" alt="">
                           <div class="hover-box-content">
-                              <h3><?php echo produk['judul'];?></h3>
+                              <h3><?php echo $produk['judul'];?></h3>
                               <ul class="icon">
-                                  <li><a class="gallery" href="<?php echo base_url('assets/upload/image/'.$produk['image']);?>" data-lightbox="lightbox" data-title="<?php echo produk['judul'];?>"><i class="fa fa-search"></i></a></li>
+                                  <li><a class="gallery" href="<?php echo base_url('assets/upload/image/'.$produk['image']);?>" data-lightbox="lightbox" data-title="<?php echo $produk['judul'];?>"><i class="fa fa-search"></i></a></li>
                                   <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
                               </ul>
                           </div>
@@ -259,14 +259,17 @@
           <div class="row">
               <div class="col-md-12">
                   <div class="team-carousel">
+
+                      <?php foreach ($karyawan as $karyawan){ ?>
+
                       <div class="our-team">
                           <div class="team-pic">
-                              <img src="<?php echo base_url(); ?>assets/images/team/team-1.png" alt="">
+                              <img src="<?php echo base_url('assets/upload/image/'.$karyawan['image']);?>" alt="">
                           </div>
                           <div class="team-profile">
                               <h3 class="team-title">
-                                  <a href="team-details.html">Lan Cooper</a>
-                                  <small>Manager</small>
+                                  <a href="team-details.html"><?php echo $karyawan['nama'];?></a>
+                                  <small><?php echo $karyawan['jabatan'];?></small>
                               </h3>
                               <ul class="team-social">
                                   <li><a href="#" class="fa fa-facebook"></a></li>
@@ -276,91 +279,9 @@
                               </ul>
                           </div>
                       </div>
-                      <div class="our-team">
-                          <div class="team-pic">
-                              <img src="<?php echo base_url(); ?>assets/images/team/team-2.png" alt="">
-                          </div>
-                          <div class="team-profile">
-                              <h3 class="team-title">
-                                  <a href="team-details.html">Ezra Oliva</a>
-                                  <small>Engineer</small>
-                              </h3>
-                              <ul class="team-social">
-                                  <li><a href="#" class="fa fa-facebook"></a></li>
-                                  <li><a href="#" class="fa fa-twitter"></a></li>
-                                  <li><a href="#" class="fa fa-google-plus"></a></li>
-                                  <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="our-team">
-                          <div class="team-pic">
-                              <img src="<?php echo base_url(); ?>assets/images/team/team-3.png" alt="">
-                          </div>
-                          <div class="team-profile">
-                              <h3 class="team-title">
-                                  <a href="team-details.html">Jose Easton</a>
-                                  <small>Engineer</small>
-                              </h3>
-                              <ul class="team-social">
-                                  <li><a href="#" class="fa fa-facebook"></a></li>
-                                  <li><a href="#" class="fa fa-twitter"></a></li>
-                                  <li><a href="#" class="fa fa-google-plus"></a></li>
-                                  <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="our-team">
-                          <div class="team-pic">
-                              <img src="<?php echo base_url(); ?>assets/images/team/team-4.png" alt="">
-                          </div>
-                          <div class="team-profile">
-                              <h3 class="team-title">
-                                  <a href="team-details.html">Brandon Tyler</a>
-                                  <small>CEO</small>
-                              </h3>
-                              <ul class="team-social">
-                                  <li><a href="#" class="fa fa-facebook"></a></li>
-                                  <li><a href="#" class="fa fa-twitter"></a></li>
-                                  <li><a href="#" class="fa fa-google-plus"></a></li>
-                                  <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="our-team">
-                          <div class="team-pic">
-                              <img src="<?php echo base_url(); ?>assets/images/team/team-1.png" alt="">
-                          </div>
-                          <div class="team-profile">
-                              <h3 class="team-title">
-                                  <a href="team-details.html">Xavier Leo</a>
-                                  <small>Engineer</small>
-                              </h3>
-                              <ul class="team-social">
-                                  <li><a href="#" class="fa fa-facebook"></a></li>
-                                  <li><a href="#" class="fa fa-twitter"></a></li>
-                                  <li><a href="#" class="fa fa-google-plus"></a></li>
-                                  <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="our-team">
-                          <div class="team-pic">
-                              <img src="<?php echo base_url(); ?>assets/images/team/team-2.png" alt="">
-                          </div>
-                          <div class="team-profile">
-                              <h3 class="team-title">
-                                  <a href="team-details.html">Jason Carson</a>
-                                  <small>CEO</small>
-                              </h3>
-                              <ul class="team-social">
-                                  <li><a href="#" class="fa fa-facebook"></a></li>
-                                  <li><a href="#" class="fa fa-twitter"></a></li>
-                                  <li><a href="#" class="fa fa-google-plus"></a></li>
-                                  <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                          </div>
-                      </div>
+
+                      <?php } ?>
+
                   </div>
               </div>
           </div>

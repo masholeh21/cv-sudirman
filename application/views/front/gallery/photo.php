@@ -23,87 +23,21 @@
     <div class="container">
         <div class="row">
             <div class="portfolio-col">
-                <!-- Filter Nav -->
-                <ul class="portfolio-nav">
-                    <li data-filter="all"> All </li>
-                    <li data-filter="1"> Web Design </li>
-                    <li data-filter="2"> Grapich </li>
-                    <li data-filter="3"> Mobile app </li>
-                </ul>
-                <!-- Filter Content -->
+
                 <div class="filtr-container">
-                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 2" data-sort="value">
-                        <div class="hover-box">
-                            <img src="<?php echo base_url(); ?>assets/images/project/p1.jpg" alt="">
-                            <div class="hover-box-content">
-                                <h3>Project title</h3>
-                                <ul class="icon">
-                                    <li><a class="gallery" href="<?php echo base_url(); ?>assets/images/project/p1.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <?php foreach ($foto as $galeri){ ?>
                     <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="2, 1" data-sort="value">
                         <div class="hover-box">
-                            <img src="<?php echo base_url(); ?>assets/images/project/p2.jpg" alt="">
+                            <img src="<?php echo base_url('assets/upload/image/'.$galeri['image']);?>" alt="">
                             <div class="hover-box-content">
-                                <h3>Project title</h3>
+                                <h3><?php echo $galeri['judul'] ?></h3>
                                 <ul class="icon">
-                                    <li><a class="gallery" href="<?php echo base_url(); ?>assets/images/project/p2.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
+                                    <li><a class="gallery" href="<?php echo base_url('assets/upload/image/'.$galeri['image']);?>" data-lightbox="lightbox" data-title="<?php echo $galeri['judul'] ?>"><i class="fa fa-search"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 1" data-sort="value">
-                        <div class="hover-box">
-                            <img src="<?php echo base_url(); ?>assets/images/project/p3.jpg" alt="">
-                            <div class="hover-box-content">
-                                <h3>Project title</h3>
-                                <ul class="icon">
-                                    <li><a class="gallery" href="<?php echo base_url(); ?>assets/images/project/p3.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="1, 2" data-sort="value">
-                        <div class="hover-box">
-                            <img src="<?php echo base_url(); ?>assets/images/project/p4.jpg" alt="">
-                            <div class="hover-box-content">
-                                <h3>Project title</h3>
-                                <ul class="icon">
-                                    <li><a class="gallery" href="<?php echo base_url(); ?>assets/images/project/p4.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 2" data-sort="value">
-                        <div class="hover-box">
-                            <img src="<?php echo base_url(); ?>assets/images/project/p5.jpg" alt="">
-                            <div class="hover-box-content">
-                                <h3>Project title</h3>
-                                <ul class="icon">
-                                    <li><a class="gallery" href="<?php echo base_url(); ?>assets/images/project/p5.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 1" data-sort="value">
-                        <div class="hover-box">
-                            <img src="<?php echo base_url(); ?>assets/images/project/p6.jpg" alt="">
-                            <div class="hover-box-content">
-                                <h3>Project title</h3>
-                                <ul class="icon">
-                                    <li><a class="gallery" href="<?php echo base_url(); ?>assets/images/project/p6.jpg" data-lightbox="lightbox" data-title="Your project title"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12 text-center">

@@ -5,8 +5,13 @@ class Product_2 extends CI_Controller {
 
 	public function index()
 	{
-		$data = array( 'title'	=> 'Home',
-										'isi'	 => 'front/product/product_2');
+        $site  		= $this->mConfig->list_config();
+        $produk     = $this->mProduk->listIndustriKecil();
+
+		$data = array( 'title'	 => 'Home',
+                       'site'    => $site,
+                       'produks' => $produk,
+				       'isi'	 => 'front/product/product_2');
 		$this->load->view('front/layout/wrapper',$data);
 	}
 }

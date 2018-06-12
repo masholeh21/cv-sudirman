@@ -24,39 +24,39 @@
           <div class="row">
               <div class="col-md-6">
                   <div class="about-three-col">
-                      <img src="<?php echo base_url(); ?>assets/images/about/2.jpg" alt="">
+                      <img src="<?php echo base_url('assets/upload/image/'.$sekilasperusahaan['image']);?>" alt="">
                   </div>
               </div>
               <div class="col-md-6">
                  <div class="about-three-col">
-                     <h3>Misi Kami</h3>
-                     <p>Sudah banyak yang memanfaatkan jasa pengecoran setengah jadi hingga finish di cv.sudirman dikarenakan kami menganut jasa, yang berarti banyak sedikit pesanan pelanggan tetap kami kerjakan dengan professional tanpa melihat banyak atau sedikit.</p>
+                     <h3>Sekilas Perusahaan</h3>
+                     <p><?php echo $sekilasperusahaan['deskripsi'] ?></p>
                  </div>
               </div>
           </div>
           <div class="row">
               <div class="col-md-6">
                  <div class="about-three-col">
-                     <h3>Visi Kami</h3>
-                     <p>Orderan anda adalah <b>prioritas kami</b></p>
+                     <h3>Visi & Misi </h3>
+                     <p><?php echo $visimisi['deskripsi'] ?></p>
                  </div>
               </div>
               <div class="col-md-6">
                   <div class="about-three-col">
-                      <img src="<?php echo base_url(); ?>assets/images/about/3.jpg" alt="">
+                      <img src="<?php echo base_url('assets/upload/image/'.$visimisi['image']);?>" alt="">
                   </div>
               </div>
           </div>
           <div class="row">
               <div class="col-md-6">
                   <div class="about-three-col">
-                      <img src="<?php echo base_url(); ?>assets/images/about/4.jpg" alt="">
+                      <img src="<?php echo base_url('assets/upload/image/'.$pesandirektur['image']);?>" alt="">
                   </div>
               </div>
               <div class="col-md-6">
                  <div class="about-three-col">
-                     <h3>Hubugni Kami</h3>
-                     <p>Bagi anda yang ingin berkonsultasi langsung dengan ahli pengecoran logam, agar mendapatkan informasi yang jelas dan tepat bisa menghubungi via Email, Telpon, Sms, Media sosial (instagram:@cvsudirman)</p>
+                     <h3>Pesan Direktur</h3>
+                     <p><p><?php echo $pesandirektur['deskripsi'] ?></p>
                  </div>
               </div>
           </div>

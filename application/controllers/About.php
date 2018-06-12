@@ -5,8 +5,17 @@ class About extends CI_Controller {
 
 	public function index()
 	{
-		$data = array( 'title'	=> 'About',
-										'isi'	 => 'front/about/about');
+        $site  		= $this->mConfig->list_config();
+        $sekilasperusahaan = $this->mTentangKami->listSekilasPerusahaan();
+        $visimisi = $this->mTentangKami->listVisiMisi();
+        $pesandirektur = $this->mTentangKami->listPesanDirektur();
+
+		$data = array(  'title'	 => 'About',
+                        'site'   => $site,
+                        'sekilasperusahaan' => $sekilasperusahaan,
+                        'visimisi' => $visimisi,
+                        'pesandirektur' => $pesandirektur,
+                        'isi'	 => 'front/about/about');
 		$this->load->view('front/layout/wrapper',$data);
 	}
 }

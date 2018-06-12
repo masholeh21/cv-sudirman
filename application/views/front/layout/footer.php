@@ -7,7 +7,7 @@
                     <div class="footer-logo">
                         <a href="#"><img src="<?php echo base_url(); ?>assets/images/logo-header.png" alt=""></a>
                     </div>
-                    <p>Over 24 years experience and knowledge international standards, technologicaly changes our industrial system, we are dedicated to provides the best solutions to our valued customers there are many variations solutions.</p>
+                    <p>CV. Sudirman adalah sebuah perusahaan yang bergerak dalam bidang jasa pengecoran Logam yang besar. Berdiri sejak 20 tahun lebih CV. Sudirman berhasil membangun komunikasi dan melebarkan sayapnya didunia pengecoran logam nusantara dan mempunyai mitra yang sangat banyak dan loyal terhadap industri pengecoran logam. </p>
                     <ul class="about-info">
                         <li><i class="fa fa-map-marker" aria-hidden="true"></i> <p>Ceper, Klaten, Jawa Tengah</p></li>
                         <li><i class="fa fa-phone" aria-hidden="true"></i> <p>+012 111-222-1234</p></li>
