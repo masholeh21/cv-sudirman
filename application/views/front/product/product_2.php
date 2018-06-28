@@ -22,7 +22,7 @@
 <section class="project-title-area" id="work">
     <div class="container">
         <div class="row">
-            <?php foreach ($produks as $produk){ ?>
+            <?php foreach ($produk as $produk){ ?>
             <div class="col-md-4 col-sm-6 fw600 projects-title-col">
                 <div class="hover-box">
                     <img src="<?php echo base_url('assets/upload/image/'.$produk['image']);?>" alt="">
@@ -38,16 +38,9 @@
                 </div>
             </div>
             <?php } ?>
+
             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                <ul class="pagination">
-                    <li class="disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
+                <?php echo $pagination; ?>
             </div>
         </div>
     </div>

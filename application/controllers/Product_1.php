@@ -5,20 +5,17 @@ class Product_1 extends CI_Controller {
 
 	public function index()
 	{
-
         $this->load->library('pagination');
 
         $site  		= $this->mConfig->list_config();
 
-
             $config['base_url'] = base_url('product_1/');
             $config['total_rows'] = $this->mProduk->total_rows('industri_besar');
-            $config['per_page'] = 2;
-
+            $config['per_page'] = 9;
             $config['full_tag_open'] = '<ul class="pagination">';
             $config['full_tag_close'] = '</ul>';
-            $config['first_link']       = 'First';
-            $config['last_link']        = 'Last';
+            $config['first_link'] = 'First';
+            $config['last_link'] = 'Last';
             $config['first_tag_open'] = '<li>';
             $config['first_tag_close'] = '</li>';
             $config['prev_link'] = '&laquo';
@@ -41,7 +38,7 @@ class Product_1 extends CI_Controller {
 		$data = array( 'title'	=> 'Home',
                        'site'   => $site,
                        'produk' => $this->mProduk->read('industri_besar','id_industri_besar',$limit,$offset),
-                      'pagination' => $this->pagination->create_links(),
+                       'pagination' => $this->pagination->create_links(),
                        'isi'	=> 'front/product/product_1');
 		$this->load->view('front/layout/wrapper',$data);
 	}

@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6 fw600">
                     <div class="titlebar-col">
-                        <p><a href="<?php echo base_url('home'); ?>">Home</a> | <a href="#"><span>Projects</span></a></p>
+                        <p><a href="<?php echo base_url('home'); ?>">Home</a> | <a href="#"><span>Galeri Foto</span></a></p>
                     </div>
                 </div>
             </div>
@@ -39,17 +39,10 @@
                     </div>
                     <?php } ?>
                 </div>
+
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                <ul class="pagination">
-                    <li class="disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
+                <?php echo $pagination; ?>
             </div>
         </div>
     </div>

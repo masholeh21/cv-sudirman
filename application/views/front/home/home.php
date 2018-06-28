@@ -161,46 +161,24 @@
   <section class="counter-area">
       <div class="container">
           <div class="row">
-              <div class="col-md-3 col-sm-6 col-xs-6 default-col">
+              <div class="col-md-6 col-sm-6 col-xs-6 default-col">
                   <div class="counter-box">
                       <div class="counter-icon"><i class="icofont icofont-files"></i>
                       </div>
                       <div class="counter-item counter">5890</div>
                       <div class="counter-title">
-                          <h4>completed jobs</h4>
+                          <h4>Pengunjung Web</h4>
                       </div>
                   </div>
                   <!--counter-box-->
               </div>
-              <div class="col-md-3 col-sm-6 col-xs-6 default-col">
+              <div class="col-md-6 col-sm-6 col-xs-6 default-col">
                   <div class="counter-box">
                       <div class="counter-icon"><i class="icofont icofont-businessman"></i>
                       </div>
                       <div class="counter-item counter">5830</div>
                       <div class="counter-title">
                           <h4>Happy client</h4>
-                      </div>
-                  </div>
-                  <!--counter-box-->
-              </div>
-              <div class="col-md-3 col-sm-6 col-xs-6 default-col">
-                  <div class="counter-box">
-                      <div class="counter-icon"><i class="icofont icofont-coins"></i>
-                      </div>
-                      <div class="counter-item counter">1856</div>
-                      <div class="counter-title">
-                          <h4>Our staff</h4>
-                      </div>
-                  </div>
-                  <!--counter-box-->
-              </div>
-              <div class="col-md-3 col-sm-6 col-xs-6 default-col">
-                  <div class="counter-box">
-                      <div class="counter-icon"><i class="icofont icofont-award"></i>
-                      </div>
-                      <div class="counter-item counter">145</div>
-                      <div class="counter-title">
-                          <h4>Awards</h4>
                       </div>
                   </div>
                   <!--counter-box-->
