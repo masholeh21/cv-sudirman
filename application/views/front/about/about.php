@@ -70,8 +70,8 @@
               <div class="col-md-8">
                   <div class="separator-col">
                       <h2>please feel free to contact us</h2>
-                      <h4><span>Hotline:</span> +001-111-222-3344</h4>
-                      <h4><span>Mail Address:</span> yourmail@gmail.com</h4>
+                      <h4><span>Hotline:</span> <?php echo $site['telepon'] ?></h4>
+                      <h4><span>Mail Address:</span> <?php echo $site['email'] ?></h4>
                   </div>
               </div>
           </div>

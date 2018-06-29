@@ -8,7 +8,6 @@
             <li><a href="<?php echo base_url('admin/setting/config') ?>">General Settings</a></li>
             <li><a href="<?php echo base_url('admin/setting/logo') ?>">Logo</a></li>
             <li><a href="<?php echo base_url('admin/setting/icon') ?>">Icon</a></li>
-            <li><a href="<?php echo base_url('admin/setting/locations') ?>">Locations</a></li>
         </ul>
     </li>
     <li><a href="#"><i class="fa fa-user"></i> Tentang Kami<span class="fa arrow"></span></a>
@@ -44,8 +43,7 @@
     </li>
     <li><a href="<?php echo base_url('admin/data_user') ?>"><i class="fa fa-users"></i> Data User</a></li>
     <li><a href="<?php echo base_url('admin/kontak') ?>"><i class="fa fa-envelope-o"></i> Kontak</a></li>
-    <li><a href="<?php echo base_url('admin/brosur') ?>"><i class="fa fa-envelope-o"></i> Brosur</a></li>
-    <li><a href="admin/login/Logout"><i class="fa fa-envelope-o"></i>Logout</a></li>
+    <li><a href="<?php echo base_url('admin/login/logout') ?>"><i class="fa fa-envelope-o"></i>Logout</a></li>
 
 </ul>
 </div>

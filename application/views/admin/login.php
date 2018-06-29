@@ -1,10 +1,13 @@
+<?php
+    $site = $this->mConfig->list_config();
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Login Administrator | CV Sudirman</title>
-<link href="<?php echo base_url('#') ?>" rel="shortcut icon">
+<link href="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>" rel="shortcut icon" type="image/png">
 <!-- BOOTSTRAP STYLES-->
 <link href="<?php echo base_url() ?>assets/admin/assets/css/bootstrap.css" rel="stylesheet" />
 <!-- FONTAWESOME STYLES-->
@@ -22,14 +25,16 @@
 <div class="container">
 <div class="row text-center ">
 <div class="col-md-12">
-    <h2><img src="<?php echo base_url('#');?>" width="150px"></h2>
+    <br>
+    <h2><img src="<?php echo base_url(); ?>assets/images/logo-putih.png" width="250px"></h2>
+    <br>
 </div>
 </div>
 <div class="row ">
 <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 <div class="panel panel-default">
 <div class="panel-heading" align="center">
-<strong>Login</strong>
+<strong>Login Administrator</strong>
 </div>
 <div class="panel-body">
 

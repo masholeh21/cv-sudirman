@@ -28,7 +28,9 @@
                     <?php foreach ($video as $galeri){ ?>
                     <div class="col-xs-6 col-sm-4 col-md-3 filtr-item" data-category="3, 2" data-sort="value">
                         <?php echo $galeri['link_video'] ?>
-                        <center><h4><?php echo $galeri['judul'] ?></h4></center><br>
+                        <div class="project-title-box">
+                            <h3><?php echo $galeri['judul'] ?></h3>
+                        </div>
                     </div>
                     <?php } ?>
 

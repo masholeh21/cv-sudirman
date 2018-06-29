@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-6 fw600">
                     <div class="titlebar-col">
-                        <h2>Produk Kita</h2>
+                        <h2>Industri Besar</h2>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6 fw600">

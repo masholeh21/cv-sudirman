@@ -5,8 +5,10 @@ class Contact extends CI_Controller {
 
 	public function index()
 	{
+        $site  		= $this->mConfig->list_config();
 		$data = array( 'title'	=> 'Home',
-										'isi'	 => 'front/contact/contact');
+                    'site'   => $site,
+				       'isi'	=> 'front/contact/contact');
 		$this->load->view('front/layout/wrapper',$data);
 	}
 }

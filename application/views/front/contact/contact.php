@@ -1,3 +1,5 @@
+
+
 <!-- Inner Page title Start -->
 <section class="innerpage-titlebar">
     <div class="container">
@@ -25,32 +27,19 @@
             <div class="col-md-4">
                 <div class="contact-box col-default">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                    <p>3312(A) / 2 Mayville, Barker Street, Western Australia</p>
+                    <p>Ceper, Klaten, Jawa Tengah</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-box col-default">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <p>yourmail@gmail.com</p>
-                    <p>yourmail@gmail.com</p>
+                    <p><?php echo $site['email'] ?></p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-box col-default">
                     <i class="fa fa-phone" aria-hidden="true"></i>
-                    <p>+012 716-753-8524 <br> +012 607-591-1611</p>
-                </div>
-            </div>
-            <div class="col-md-8 col-md-offset-2">
-                <div class="contact-form col-default text-center">
-                    <div id="form-messages"></div>
-                    <form id="ajax-contact" method="post" action="php/contact.php">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-                        <textarea class="form-control textarea-hight-full" id="message" name="message" rows="5" placeholder="Message" required></textarea>
-                        <button class="btn btn-default simple-btn" type="submit">Sent Message</button>
-                    </form>
+                    <p><?php echo $site['telepon'] ?></p>
                 </div>
             </div>
         </div>
@@ -58,7 +47,7 @@
 </section>
 
 <!-- Google Map -->
-<div id="map" style="width:100%; height:400px;"></div>
+<!--<div id="map" style="width:100%; height:400px;"></div> -->
 
 
 
