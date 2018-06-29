@@ -1974,9 +1974,10 @@ input:-moz-placeholder {
 }
 .hover-box img{
     width: 100%;
-    height: auto;
+    height: 300px;
     transition: all 0.35s ease 0s;
 }
+.hover-box:hover img{ opacity: 0.5; }
 .hover-box .hover-box-content{
     padding: 30px 10px 30px 0;
     background: rgba(0, 0, 0, 0.65);
@@ -1993,7 +1994,7 @@ input:-moz-placeholder {
     left: 10px;
     bottom: 10px;
     right: 10px;
-    opacity: 0;
+    opacity: 1;
 }
 .hover-box h3{
     width: 100%;
@@ -2021,7 +2022,7 @@ input:-moz-placeholder {
     transition: all 0.35s ease 0s;
 }
 .hover-box:hover .icon li{
-    opacity: 0;
+    opacity: 1;
     transform: translateY(0px);
 }
 .hover-box:hover .icon li:first-child{ transition-delay: 0.1s; }
