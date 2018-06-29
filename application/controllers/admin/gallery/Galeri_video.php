@@ -81,9 +81,9 @@
 	}
 
 	// Delete Gallery
-	public function delete($id_Galeri_video) {
+	public function delete($id_galeri_video) {
 		$data = array('id_galeri_video'	=> $id_galeri_video);
-		$this->mGaleri->deleteGalerivideo($data);
+		$this->mGaleri->deleteGaleriVideo($data);
 		$this->session->set_flashdata('sukses','Success');
 		redirect(base_url('admin/gallery/Galeri_video'));
 	}
