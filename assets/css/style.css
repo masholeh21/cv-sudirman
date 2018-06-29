@@ -440,8 +440,8 @@ input:-moz-placeholder {
     background: #ffffff;
 }
 .main-herader .navbar-brand img {
-    width: 215px;
-    height: 80px;
+    width: 250px;
+    height: 85px;
 }
 
 /* Header Top CSS Start */
@@ -504,6 +504,7 @@ input:-moz-placeholder {
     display: inline-block;
 }
 .herader-topbar-col.tobar-rightside p a span {
+    font-weight: 100;
     color: #ffffff;
     background: #40486D;
     padding: 8px 15px;
@@ -1976,7 +1977,6 @@ input:-moz-placeholder {
     height: auto;
     transition: all 0.35s ease 0s;
 }
-.hover-box:hover img{ opacity: 0.5; }
 .hover-box .hover-box-content{
     padding: 30px 10px 30px 0;
     background: rgba(0, 0, 0, 0.65);
@@ -1993,7 +1993,7 @@ input:-moz-placeholder {
     left: 10px;
     bottom: 10px;
     right: 10px;
-    opacity: 1;
+    opacity: 0;
 }
 .hover-box h3{
     width: 100%;
@@ -2021,7 +2021,7 @@ input:-moz-placeholder {
     transition: all 0.35s ease 0s;
 }
 .hover-box:hover .icon li{
-    opacity: 1;
+    opacity: 0;
     transform: translateY(0px);
 }
 .hover-box:hover .icon li:first-child{ transition-delay: 0.1s; }
@@ -2117,7 +2117,7 @@ input:-moz-placeholder {
     text-align: center;
     margin-bottom: 30px;
     padding: 20px 20px;
-    background: #40486D;
+    background: #CF181F;
 }
 .project-title-box h3 {
     font-size: 18px;

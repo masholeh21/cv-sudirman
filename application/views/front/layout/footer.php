@@ -10,8 +10,8 @@
                     <p>CV. Sudirman adalah sebuah perusahaan yang bergerak dalam bidang jasa pengecoran Logam yang besar. Berdiri sejak 20 tahun lebih CV. Sudirman berhasil membangun komunikasi dan melebarkan sayapnya didunia pengecoran logam nusantara dan mempunyai mitra yang sangat banyak dan loyal terhadap industri pengecoran logam. </p>
                     <ul class="about-info">
                         <li><i class="fa fa-map-marker" aria-hidden="true"></i> <p>Ceper, Klaten, Jawa Tengah</p></li>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i> <p>+012 111-222-1234</p></li>
-                        <li><i class="fa fa-envelope" aria-hidden="true"></i> <p>info@cv-sudirman.com</p></li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> <p><?php echo $site['telepon'] ?></p></li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i> <p><?php echo $site['email'] ?></p></li>
                     </ul>
                 </div>
             </div>
@@ -19,13 +19,13 @@
             <div class="form-column col-md-8 col-sm-12 col-xs-12">
                 <div class="inner-column">
                     <div class="sec-title">
-                        <h4>Recent Post</h4>
+                        <h4>Contact</h4>
                         <div class="heading-under-line"></div>
                     </div>
                     <!-- Default Form -->
                     <div class="default-form">
                         <!--Default Form-->
-                        <form method="post" action="blog.html">
+                        <form method="post" action="#">
                             <div class="row clearfix">
                                 <div class="col-md-6 col-sm-6 col-xs-12 form-group">
                                     <input type="text" name="username" placeholder="Enter Name" required>
@@ -77,9 +77,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="copyright-col text-right center991">
-                    <p>©2018 <a href="https://themeforest.net/user/xcodesolution" target="_blank">CV SUDRIMAN</a> All Rights Reserved | Web Design by Codenesia</p>
+                    <p>©2018 <a href="https://themeforest.net/user/xcodesolution" target="_blank">CV SUDRIMAN</a> All Rights Reserved <br>Web Design by Codenesia</p>
                 </div>
             </div>
         </div>

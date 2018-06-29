@@ -1,3 +1,7 @@
+<?php
+    $site = $this->mConfig->list_config();
+?>
+
 <head>
 
     <meta charset="utf-8">
@@ -9,7 +13,7 @@
     <title>CV-Sudirman.com | Induction Furnance System</title>
 
     <!-- Favicon -->
-    <link href="<?php echo base_url(); ?>assets/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="<?php echo base_url('assets/upload/image/'.$site['icon']) ?>" rel="shortcut icon" type="image/png">
 
     <!-- Bootstrap CSS -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +23,8 @@
 
     <!-- Responsive CSS -->
     <link href="<?php echo base_url(); ?>assets/css/responsive.css" rel="stylesheet">
+
+    <script src="<?php echo base_url() ?>assets/admin/assets/js/jquery-1.10.2.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

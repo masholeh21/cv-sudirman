@@ -12,9 +12,9 @@
               <div class="col-md-6 col-sm-12 col-xs-12">
                   <div class="herader-topbar-col tobar-leftside">
                       <i class="fa fa-phone" aria-hidden="true"></i>
-                      <span class="after-bdr">+0123 1205 1010</span>
+                      <span class="after-bdr"><?php echo $site['telepon'] ?></span>
                       <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                      <span>info@cv-sudirman.com</span>
+                      <span><?php echo $site['email'] ?></span>
                   </div>
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12">
@@ -49,9 +49,6 @@
                                     <a href="<?php echo base_url('home'); ?>">Home </a>
                                 </li>
                                 <li><a href="<?php echo base_url('about'); ?>">TENTANG KAMI</a></li>
-                                <li class="dropdown">
-                                    <a href="<?php echo base_url('service'); ?>"> LAYANAN </a>
-                                </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUK<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu">

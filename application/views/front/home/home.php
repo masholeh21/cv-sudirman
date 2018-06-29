@@ -71,7 +71,7 @@
   <section class="about-area" id="about">
       <div class="container">
           <div class="row">
-              <div class="col-lg-6 col-md-6">
+              <div class="col-lg-7 col-md-7">
                   <div class="row">
                       <div class="col-md-6">
                           <div class="about-col">
@@ -97,11 +97,9 @@
                       </div>
                   </div>
               </div>
-              <div class="col-lg-6 col-md-6">
+              <div class="col-lg-5 col-md-5">
                  <div class="about-col">
-                     <div class="about-image">
-                          <img src="<?php echo base_url(); ?>assets/images/about/1.png" alt="">
-                      </div>
+                    <img src="<?php echo base_url(); ?>assets/images/logo-transparant.png" alt="">
                  </div>
               </div>
           </div>
@@ -120,69 +118,37 @@
               </div>
           </div>
           <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-12">
                   <div class="row">
-                      <div class="col-md-6 col-sm-6 col-xs-6 fw600">
+                      <div class="col-md-4 col-sm-4 col-xs-4 fw600">
                           <div class="serviceBox wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0s">
                               <div class="service-icon">
                                   <i class="flaticon-brick-wall"></i>
                               </div>
                               <h3 class="title">Industri Besar</h3>
                               <p class="description">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
                               </p>
                           </div>
                       </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6 fw600">
+                      <div class="col-md-4 col-sm-4 col-xs-4 fw600">
+                            <img src="<?php echo base_url(); ?>assets/images/fav.png" height="100px" alt=" ">
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-4 fw600">
                           <div class="serviceBox wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
                               <div class="service-icon">
                                   <i class="flaticon-crane-1"></i>
                               </div>
                               <h3 class="title">Industri Rumahan</h3>
                               <p class="description">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
                               </p>
                           </div>
                       </div>
 
                   </div>
               </div>
-              <div class="col-md-4 col-sm-12">
-                  <img class="service-img" src="<?php echo base_url(); ?>assets/images/worker-2.png" alt=" ">
-              </div>
-          </div>
-      </div>
-  </section>
 
-
-
-
-  <!-- Counter Start -->
-  <section class="counter-area">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-6 default-col">
-                  <div class="counter-box">
-                      <div class="counter-icon"><i class="icofont icofont-files"></i>
-                      </div>
-                      <div class="counter-item counter">5890</div>
-                      <div class="counter-title">
-                          <h4>Pengunjung Web</h4>
-                      </div>
-                  </div>
-                  <!--counter-box-->
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-6 default-col">
-                  <div class="counter-box">
-                      <div class="counter-icon"><i class="icofont icofont-businessman"></i>
-                      </div>
-                      <div class="counter-item counter">5830</div>
-                      <div class="counter-title">
-                          <h4>Happy client</h4>
-                      </div>
-                  </div>
-                  <!--counter-box-->
-              </div>
           </div>
       </div>
   </section>
@@ -210,7 +176,6 @@
                               <h3><?php echo $produk['judul'];?></h3>
                               <ul class="icon">
                                   <li><a class="gallery" href="<?php echo base_url('assets/upload/image/'.$produk['image']);?>" data-lightbox="lightbox" data-title="<?php echo $produk['judul'];?>"><i class="fa fa-search"></i></a></li>
-                                  <li><a href="projects-details.html"><i class="fa fa-link"></i></a></li>
                               </ul>
                           </div>
                       </div>
@@ -219,6 +184,36 @@
 
               <?php } ?>
 
+          </div>
+      </div>
+  </section>
+
+  <!-- Counter Start -->
+  <section class="counter-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6 default-col">
+                  <div class="counter-box">
+                      <div class="counter-icon"><i class="icofont icofont-files"></i>
+                      </div>
+                      <div class="counter-item counter">5890</div>
+                      <div class="counter-title">
+                          <h4>Pengunjung Web</h4>
+                      </div>
+                  </div>
+                  <!--counter-box-->
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6 default-col">
+                  <div class="counter-box">
+                      <div class="counter-icon"><i class="icofont icofont-businessman"></i>
+                      </div>
+                      <div class="counter-item counter">5830</div>
+                      <div class="counter-title">
+                          <h4>Happy client</h4>
+                      </div>
+                  </div>
+                  <!--counter-box-->
+              </div>
           </div>
       </div>
   </section>
