@@ -1,3 +1,7 @@
+<?php
+$sekilasperusahaan = $this->mTentangKami->listSekilasPerusahaan();
+?>
+
 <!-- footer start -->
 <footer class="main-footer">
     <div class="container">
@@ -7,7 +11,7 @@
                     <div class="footer-logo">
                         <a href="#"><img src="<?php echo base_url(); ?>assets/images/logo-header.png" alt=""></a>
                     </div>
-                    <p>CV. Sudirman adalah sebuah perusahaan yang bergerak dalam bidang jasa pengecoran Logam yang besar. Berdiri sejak 20 tahun lebih CV. Sudirman berhasil membangun komunikasi dan melebarkan sayapnya didunia pengecoran logam nusantara dan mempunyai mitra yang sangat banyak dan loyal terhadap industri pengecoran logam. </p>
+                    <p><?php echo $sekilasperusahaan['deskripsi'] ?></p>
                     <ul class="about-info">
                         <li><i class="fa fa-map-marker" aria-hidden="true"></i> <p>Ceper, Klaten, Jawa Tengah</p></li>
                         <li><i class="fa fa-phone" aria-hidden="true"></i> <p><?php echo $site['telepon'] ?></p></li>

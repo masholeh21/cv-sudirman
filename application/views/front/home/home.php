@@ -1,3 +1,7 @@
+<?php
+$sekilasperusahaan = $this->mTentangKami->listSekilasPerusahaan();
+?>
+
 <!-- Main Slider Start -->
   <section class="main-slider-area">
       <div class="main-container">
@@ -90,9 +94,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="about-col">
-                              <p>
-                                  CV-Sudirman adalah sebuah perusahaan yang bergerak dalam bidang jasa pengecoran Logam yang besar. Berdiri sejak 20 tahun lebih CV-Sudirman.com berhasil membangun komunikasi dan melebarkan sayapnya didunia pengecoran logam nusantara dan mempunyai mitra yang sangat banyak dan loyal terhadap industri pengecoran logam.
-                              </p>
+                              <p><?php echo $sekilasperusahaan['deskripsi'] ?></p>
                           </div>
                       </div>
                   </div>
@@ -196,7 +198,7 @@
                   <div class="counter-box">
                       <div class="counter-icon"><i class="icofont icofont-files"></i>
                       </div>
-                      <div class="counter-item counter">5890</div>
+                      <div class="counter-item counter">0</div>
                       <div class="counter-title">
                           <h4>Pengunjung Web</h4>
                       </div>
@@ -207,7 +209,7 @@
                   <div class="counter-box">
                       <div class="counter-icon"><i class="icofont icofont-businessman"></i>
                       </div>
-                      <div class="counter-item counter">5830</div>
+                      <div class="counter-item counter">0</div>
                       <div class="counter-title">
                           <h4>Happy client</h4>
                       </div>
@@ -219,7 +221,7 @@
   </section>
 
   <!-- Team Start -->
-  <section class="team-section" style="background-image:url('<?php echo base_url(); ?>assets/images/4.jpg')">
+  <section class="team-section" style="background-color:#CF181F">
       <div class="container">
           <div class="row">
               <div class="col-md-12">

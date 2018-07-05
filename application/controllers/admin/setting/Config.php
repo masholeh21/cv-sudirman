@@ -15,7 +15,6 @@ class Config extends CI_Controller {
 		$site = $this->mConfig->list_config();
 
 		$this->form_validation->set_rules('namaweb','Nama website','required');
-		$this->form_validation->set_rules('email','Email','valid_email');
 
 		if($this->form_validation->run() === FALSE) {
 
